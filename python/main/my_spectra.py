@@ -16,10 +16,6 @@ class GriddedSpectra(spectra.Spectra):
         del f
         # get position of skewers in the grid
         grid_axes, grid_cofm = self.get_axes_and_cofm(nspec,axis)
-        print('grid_axes shape',grid_axes.shape)
-        print('axes =',grid_axes)
-        print('grid_cofm shape',grid_cofm.shape)
-        print('grid_cofm =',grid_cofm)
         # call constructor of base class
         spectra.Spectra.__init__(self,num,base,cofm=grid_cofm,axis=grid_axes,
                 res=res,savefile=savefile,reload_file=reload_file,**kwargs)
